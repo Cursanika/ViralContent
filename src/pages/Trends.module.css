@@ -1,0 +1,28 @@
+/* src/pages/Trends.module.css */
+.page { max-width: 1000px; margin: 0 auto; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; }
+.title { font-size: 2.2rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 4px; }
+.subtitle { color: var(--text-secondary); font-size: 0.95rem; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.col { display: flex; flex-direction: column; gap: 16px; }
+.colTitle { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+
+.trendCard {
+  padding: 16px; display: flex; align-items: center; gap: 16px;
+  border-left: 3px solid transparent;
+}
+.trendCard.hot { border-left-color: var(--danger); }
+.trendCard.up { border-left-color: var(--success); }
+
+.rank {
+  font-size: 1.2rem; font-weight: 800; color: var(--text-placeholder);
+  width: 24px; text-align: center;
+}
+.content { flex: 1; }
+.trendTitle { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.trendMeta { font-size: 0.8rem; color: var(--text-secondary); }
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}

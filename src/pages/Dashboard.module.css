@@ -1,0 +1,75 @@
+/* src/pages/Dashboard.module.css */
+.page { max-width: 900px; margin: 0 auto; }
+
+.header { margin-bottom: 32px; }
+.greeting { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 4px; }
+.date { color: var(--text-secondary); font-size: 1rem; }
+
+.filters {
+  display: flex; gap: 8px; margin-bottom: 24px;
+}
+.filterBtn {
+  padding: 8px 16px; border-radius: 100px; border: none;
+  background: var(--bg-pill); color: var(--text-primary);
+  font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  transition: var(--transition);
+}
+.filterBtn:hover { background: var(--bg-input); }
+.filterBtn.active { background: var(--bg-card); box-shadow: var(--shadow-sm); }
+
+.highlightCard {
+  background: linear-gradient(135deg, #fff0e6, #ffe5e5);
+  border-radius: var(--radius); padding: 24px;
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px; box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255,0,0,0.05);
+}
+[data-theme="dark"] .highlightCard { background: linear-gradient(135deg, #3a1c15, #351515); border-color: transparent; }
+.highlightIcon { font-size: 2rem; }
+.highlightTitle { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.highlightSub { font-size: 0.85rem; color: var(--text-secondary); }
+
+.section { margin-bottom: 32px; }
+.sectionTitle {
+  font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+.listCard {
+  background: var(--bg-card); border-radius: var(--radius-sm);
+  padding: 16px; display: flex; align-items: center; gap: 16px;
+  box-shadow: var(--shadow-sm); margin-bottom: 12px;
+  border: 1px solid var(--border-light);
+}
+.listIcon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--bg-input); display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.listContent { flex: 1; }
+.listTitle { font-weight: 600; font-size: 0.95rem; margin-bottom: 2px; }
+.listSub { font-size: 0.8rem; color: var(--text-secondary); }
+
+.socialGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.socialCard {
+  background: var(--bg-card); border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  position: relative;
+}
+.socialHeader { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-weight: 600; font-size: 0.95rem; }
+.socialIcon { font-size: 1.2rem; }
+.socialValue { font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 4px; line-height: 1; }
+.socialLabel { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px; }
+.socialGrowth {
+  display: inline-block; padding: 4px 8px; border-radius: 6px;
+  background: var(--success-light); color: var(--success);
+  font-size: 0.75rem; font-weight: 600; margin-bottom: 12px;
+}
+.socialER { font-size: 0.8rem; color: var(--text-secondary); }
+
+@media (max-width: 800px) {
+  .socialGrid { grid-template-columns: 1fr; }
+}

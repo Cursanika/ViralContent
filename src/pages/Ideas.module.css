@@ -1,0 +1,39 @@
+/* Ideas.module.css */
+.page {}
+.header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:24px; }
+.title { font-family:'Outfit',sans-serif; font-size:1.9rem; font-weight:700; }
+.subtitle { color:var(--text-muted); font-size:0.875rem; margin-top:4px; }
+.filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+.chip {
+  padding:6px 16px; background:rgba(255,255,255,0.05);
+  border:1px solid var(--glass-border); border-radius:20px;
+  color:var(--text-muted); font-size:0.8rem; cursor:pointer;
+  transition:var(--transition); font-family:inherit;
+}
+.chip.active, .chip:hover { background:rgba(167,139,250,0.14); border-color:rgba(167,139,250,0.4); color:var(--accent); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+.card { padding:20px; transition:var(--transition); }
+.card:hover { border-color:rgba(167,139,250,0.3); transform:translateY(-2px); }
+.typeBadge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:0.7rem; font-weight:700; border:1px solid; margin-bottom:10px; }
+.ideaTitle { font-size:0.9rem; font-weight:600; margin-bottom:6px; }
+.ideaDesc { font-size:0.8rem; color:var(--text-muted); line-height:1.5; }
+.ideaDate { font-size:0.7rem; color:var(--text-muted); margin-top:8px; }
+.actions { display:flex; gap:8px; margin-top:12px; }
+.actionBtn { background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:0.75rem; padding:4px 8px; border-radius:6px; transition:var(--transition); font-family:inherit; }
+.actionBtn:hover { color:var(--text); background:rgba(255,255,255,0.06); }
+.empty { color:var(--text-muted); font-size:0.85rem; grid-column:1/-1; text-align:center; padding:60px 0; }
+.panel {
+  position:fixed; right:0; top:0; bottom:0; width:350px;
+  background:var(--bg-card);
+  border-left:1px solid var(--border-light); padding:28px 22px;
+  z-index:300; overflow-y:auto; display:flex; flex-direction:column; gap:12px;
+  box-shadow: -8px 0 32px rgba(0,0,0,0.05);
+}
+.panelHeader { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
+.panelHeader h3 { font-size:0.95rem; font-weight:600; }
+.hookItem {
+  background:var(--bg-pill); border:1px solid var(--border-light);
+  border-radius:var(--radius-sm); padding:12px 14px;
+  font-size:0.82rem; line-height:1.6; cursor:pointer; transition:var(--transition);
+}
+.hookItem:hover { background:var(--bg-input); border-color:var(--accent); }

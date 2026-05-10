@@ -1,0 +1,26 @@
+/* Scripts.module.css */
+.page {}
+.header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:28px; }
+.title { font-family:'Outfit',sans-serif; font-size:1.9rem; font-weight:700; }
+.subtitle { color:var(--text-muted); font-size:0.875rem; margin-top:4px; }
+.layout { display:grid; grid-template-columns:300px 1fr; gap:20px; height:calc(100vh - 150px); }
+.formCard { padding:22px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; }
+.label { font-size:0.74rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:4px; }
+.toneGrid { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px; }
+.toneChip {
+  padding:5px 12px; border-radius:20px; background:rgba(255,255,255,0.05);
+  border:1px solid var(--glass-border); color:var(--text-muted);
+  font-size:0.75rem; cursor:pointer; transition:var(--transition); font-family:inherit;
+}
+.toneChip:hover, .toneActive { background:rgba(167,139,250,0.14); border-color:rgba(167,139,250,0.4); color:var(--accent); }
+.outputCard { padding:22px; display:flex; flex-direction:column; overflow:hidden; }
+.outputHeader { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+.outputHeader h3 { font-size:0.95rem; font-weight:600; }
+.scriptText { font-size:0.875rem; line-height:1.85; white-space:pre-wrap; font-family:'Inter',sans-serif; color:var(--text); overflow-y:auto; flex:1; }
+.savedSection { margin-top:20px; border-top:1px solid var(--glass-border); padding-top:16px; }
+.savedSection h4 { font-size:0.82rem; color:var(--text-muted); margin-bottom:10px; font-weight:600; }
+.savedItem { background:rgba(255,255,255,0.04); border:1px solid var(--glass-border); border-radius:var(--radius-sm); padding:10px 14px; margin-bottom:7px; cursor:pointer; transition:var(--transition); }
+.savedItem:hover, .savedActive { background:rgba(167,139,250,0.1); border-color:rgba(167,139,250,0.3); }
+.savedTitle { font-size:0.82rem; font-weight:600; margin-bottom:3px; }
+.savedMeta { font-size:0.72rem; color:var(--text-muted); }
+@media(max-width:1000px) { .layout { grid-template-columns:1fr; height:auto; } }
